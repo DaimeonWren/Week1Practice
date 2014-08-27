@@ -15,18 +15,57 @@ namespace Week1Practice
             // 2. Declare a number varible called "myAge" and set it equal to your age
             // 3. Declare a boolean value called "myBool" and set it equal to true or false;
             // 4. Declare a new list of strings called "productsList" and set it equal to "basketball", "baseball glove", "tennis shoes", "hockey puck"
+            string myName = "Trai";
+            int myAge = 20;
+            bool myBool = (true || false);
+            // or bool x = true;
+            // also bool y = false;
+            string[] productList = { "basketball", "baseball glove", "tennis shoes", "hockey puck" };
 
             // PRINTING VARIABLES TO THE CONSOLE USING CONSOLE.WRITELINE()
             // 1. Print your name to the console using the format: "My name is <myName> and I'm a beast of a programmer"
             // 2. Print out your age to the console using the format: "I am <myAge> years awesome."
             // 3. Print out your boolean value using the format: "I set my boolean value equal to <myBool>"
             // 4. Using a For loop, print out each value in productsList.
+            {
+                Console.WriteLine("My name is " + myName + " and I'm a beast of a programmer");
+                Console.WriteLine("I am " + myAge + " years awesome.");
+                Console.WriteLine("I set my boolean value equal to " + myBool);
+                // number 4, I may need some help understanding how to get my Array into the 
 
+                Console.ReadKey();
+            };
             // FOR LOOP PRACTICE
             // 1. Create a for loop that prints out the numbers 1 to 10.
             // 2. Create a for loop that prints out the numbers 10 to 1.
             // 3. Create a for loop that prints out the numbers 10 to 30, only printing the even numbers
             // 4. Create a for loop that prints out the numbers 100 to 75, only printing every 5th number (100, 95, 90, 85, 80, 75)
+
+
+            // So I know this is the correcet way to creat a for loop, but what I dont uderstand is why it will not print in the console.
+
+            {
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine(i);
+            }
+            for (int v = 10; v >= 1; v--)
+            {
+                Console.WriteLine(v);
+            }
+            for (int e = 10; e <= 30;e= e + 2)
+            {
+                Console.WriteLine(e);
+            }
+            for (int k = 100; k <= 75; k = k - 5)
+            {
+                Console.WriteLine(k);
+            }
+                
+            };
+
+
+
 
             // WHILE LOOP PRACTICE
             // 1. Create a while loop that prints out the numbers from 1 to 10.
@@ -34,6 +73,51 @@ namespace Week1Practice
             // 3. Create a while loop that prints out the numbers from 15 to 30, only printing the even numbers
             // 4. Create a while loop that prints out the numbers from 100 to 75, only printing every 5th number (100, 95, 90, 85, 80, 75)
             // 5. Create a while loop that prints out the numbers from 1 to 10 until it reaches one that is divisible by 4.
+            
+               
+                int f = 0;
+                while (f >= 10)
+                {
+                    Console.WriteLine(f);
+                    f = f++;
+                }
+
+
+                int g = 10;
+                while (g <= 1)
+                {
+                    Console.WriteLine(g);
+                    g = g--;
+                }
+
+
+                int c = 15;
+            while(c <= 30){
+                Console.WriteLine(c);
+                c = c + 1 + 2;
+            }
+
+
+
+            int s = 100;
+            while (s <= 75)
+            {
+                Console.WriteLine(s);
+                s = s - 5;
+            }
+
+
+            int p = 0;
+            while (p%4 != 0)
+            {
+                Console.WriteLine(p);
+                p++;
+            }
+           
+            // For number 5 idk if its asking for the modulus when it says "divisable by 4"?
+
+            // 
+
 
             // PUTTING IT TOGETHER
             // Use either FOR or WHILE loops to accomplish the following:
@@ -41,11 +125,19 @@ namespace Week1Practice
             // 2. Print out the number of items in your list using the format: "My product list has <number of items> in it."
             // 3. Print out the number of letters of each item in productsList using the format: "<product> has <number of letters> in it."
 
-            // DECLARING AND CALLING FUNCTIONS
+           // DECLARING AND CALLING FUNCTIONS
             // 1. Create a function called "Greeting" that takes one string parameter called "name".  This function will print "Hello <name>"
             // 2. Call the Greeting function by passing in "Geronimo Jackson" as your parameter.
+            Greeting("Geronimo Jackson");
             // 3. Call the Greeting function by passing in myName as your parameter.
-             
+            Greeting(myName);
+            
+      
+
+               
+
+
+
             // 4. Create a function called "DoubleIt" that takes one integer parameter called "number".  This function will print "<number> doubled is <number * 2>"
             // 5. Call your DoubleIt Function by passing in 1337 as your parameter.
             // 6. Call your DoubleIt function by passing in myAge as your parameter.
@@ -75,7 +167,7 @@ namespace Week1Practice
             // 2. Using your NewGreeting function as the parameter for Console.WriteLine(), call your NewGreeting function using the parameter "Neil deGrasse-Tyson"
             //          EX: Console.WriteLine(FunctionCall("myParameter"));
             // 3. Using your NewGreeting function as the parameter for Console.WriteLine(), call your NewGreeting function using the parameter myName.
-            
+
             // 4. Create a function called "TripleIt" that takes one integer parameter called "number".  This function will return the number times 3.
             // 5. Using your TripleIt function as part of the parameter for Console.WriteLine(), 
             //      call your TripleIt function using the parameter of 10 to print out "10 tripled is <TripleIt Function Call>"
@@ -100,10 +192,29 @@ namespace Week1Practice
             //      increment = Call TripleIt with the parameter of myAge minus RealMultiply with the parameters 2, 4.
 
 
+            Console.ReadKey();
+
+        }
+       
+      
+        
+        static void Greeting(string name)
+        {
+
+
+            Console.WriteLine("Hello " + name);
+        
         }
 
-        //START -- FUNCTION DECLARATIONS 
 
+
+        
+        
+        
+        
+        
+        //START -- FUNCTION DECLARATIONS 
+    
         //Example function declaration
         static void MyFunction(string myParameter)
         {
